@@ -1,0 +1,10 @@
+default: &default
+ adapter: postgresql
+ encoding: unicode
+ host:     localhost
+ username: postgres
+ password: postgres
+ database: live_db
+development:
+ <<: *default
+ database: live_db
