@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+before_action :find_article, only:[:show, :edit, :destroy, :update] 
+
 
 def new
 @article = Article.new
@@ -9,15 +11,15 @@ def index
 end
 
 def show
-@article = Article.find(params[:id])
+# we only need to find the article here, and we are doing it on top of page in before action
 end
 
 def edit
-@article = Article.find(params[:id])
+# we only need to find the article here, and we are doing it on top of page in before action
 end
 
 def destroy
-@article = Article.find(params[:id])
+# we are getting article on top of page in before action
  @article.destroy
 	flash[:notice] = "Article is successfully deleted"
 	redirect_to articles_path
@@ -25,7 +27,7 @@ end
 
 
 def update
-	@article = Article.find(params[:id])
+# we are getting article on top of page in before action
 if @article.update(article_params)
 	flash[:notice] = "Article has been updated successfully"
 	redirect_to article_path(@article)
@@ -44,7 +46,11 @@ else
 end
 end
 
-private def article_params
+private 
+def find_article
+@article = Article.find(params[:id])
+end
+def article_params
 params.require(:article).permit(:title,:description)
 end
 end
