@@ -1,0 +1,121 @@
+.navbar {
+    background-color: #686c73;
+}
+.row{
+	padding: 5px;
+}
+.nav-link {
+	color: white;
+}
+.nav-link:hover {
+	background-color:white;
+	color:black;
+}
+#logo{
+    float: left;
+	color:white;
+	font-weight: bold;
+	font-size: 120%;
+	text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.center{
+	text-align: center;
+}
+
+.jumbotron{
+    margin-top:5px;
+	background-image: asset-url('business_professional_linkedin_profile_cover.jpg');
+	background-size : cover;
+	height: 77vh;
+}
+
+.jumbotron h1{
+	color:#fff;
+	line-spacing:-1px;
+	font-weight:bold;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.btn-xlarge{
+    font-size:120%;
+	color: #fff;
+    background-color: #686c73 !important;
+    border-color: #686c73 !important;
+}
+.btn-xlarge:hover{
+	color: #686c73 !important;
+    background-color: white !important;
+    border-color: white !important;
+}
+
+.boxed{
+	border:10px solid #eaeaea;
+	margin:20px;
+	padding:40px;
+	text-align: center;
+}
+
+.article_actions{
+	border-top: 1px solid #eaeaea;
+	padding-top: 5px;
+}
+.btn-xs{
+	float: right !important;
+	margin-right:5px;
+}
+
+.article-title{
+	font-weight : bold;
+	font-size: 1.5em;
+}
+
+.article-title a{
+	text-decoration : none;
+	color: #686c73;
+}
+.article-title a:hover{
+	text-decoration : none;
+	color: black;
+}
+
+.article-body{
+	border-top: 1px solid #eaeaea;
+	padding-down: 15px;
+	padding-top : 15px;
+}
+
+footer {
+	margin-top:35px;
+	padding-top:5px;
+	color:#777;
+	border-top: 1px solid #eaeaea;
+}
+
+footer ul{
+	float:right;
+	list-style:none;
+}
+footer ul li{
+	float:left;
+	margin-left:15px;
+}
+
+footer ul li a{
+	color: #686c73
+}
+footer ul li a:hover{
+	color: #686c73
+}
+
+.error-msg{
+	font-size: 75%;
+	marign-left: 20px !important;
+}
+ .error-msg h2{
+ font-weight:75%; 
+ font-size: 200%;
+ }
+@import "bootstrap";

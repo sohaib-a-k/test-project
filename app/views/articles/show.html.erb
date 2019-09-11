@@ -1,12 +1,15 @@
-<h1>Showing article </h1>
+<h2 align="center">Title : <%= @article.title %></h2>
+<!-- <div class="card card-body bg-light"> -->
+<div class="boxed">
+<div class="col-sm-10 col-sm-offset-2">
+	<h4 align="center">Description</h4>
+	<hr>
+	<%= simple_format(@article.description) %>
+</div>
 
-<p>
-	Title = <%= @article.title %>
-</p>
-<br>
-
-<p>
-	Description = <%= @article.description %>
-</p>
-
-<%= link_to 'Show All',articles_path %> | <%= link_to 'edit',edit_article_path(@article) %> 
+<div class="article_actions">
+	<%= link_to 'Show All',articles_path, class: "btn btn-xs btn-success"%>
+	<%= link_to 'Delete', article_path(@article), method: :delete, data:{confirm:"Are you sure?"}, class: "btn btn-xs btn-danger" %>
+	<%= link_to 'Edit',edit_article_path(@article) , class: "btn btn-xs btn-primary"%> 
+</div>
+</div>

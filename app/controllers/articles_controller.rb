@@ -21,7 +21,7 @@ end
 def destroy
 # we are getting article on top of page in before action
  @article.destroy
-	flash[:notice] = "Article is successfully deleted"
+	flash[:danger] = "Article is successfully deleted"
 	redirect_to articles_path
 end
 
@@ -29,7 +29,7 @@ end
 def update
 # we are getting article on top of page in before action
 if @article.update(article_params)
-	flash[:notice] = "Article has been updated successfully"
+	flash[:success] = "Article has been updated successfully"
 	redirect_to article_path(@article)
 else
 	render 'edit'
@@ -39,7 +39,7 @@ end
 def create
 @article = Article.new(article_params);
 if @article.save
-	flash[:notice] = "Article has been created successfully"
+	flash[:success] = "Article has been created successfully"
 redirect_to article_path(@article)
 else 
 	render 'new'
